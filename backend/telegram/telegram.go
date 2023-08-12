@@ -5,7 +5,6 @@ import (
 	"errors"
 	"io"
 	"strings"
-	"github.com/dceldran/rclone/backend/telegram/api"
 	"github.com/rclone/rclone/fs"
 	"github.com/rclone/rclone/fs/config/configmap"
 	"github.com/rclone/rclone/fs/config/configstruct"
