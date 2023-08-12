@@ -1,4 +1,4 @@
-module github.com/rclone/rclone
+module github.com/dceldran/rclone
 
 go 1.14
 
