@@ -108,11 +108,11 @@ func (f *Fs) Put(ctx context.Context, in io.Reader, src fs.ObjectInfo, options .
 	}
 
 	file := telebot.Document{
-		File:   telebot.FromReader(readers.NewLimited(in, src.Size())),
+		File:   telebot.FromReader(readers.NewLimitedReadCloser(in, src.Size())),
 		Caption: fileName,
 	}
 
-	message, err := f.bot.Send(f.chatID, &file)
+	message, err := f.bot.Send(telebot.Recipient(f.chatID), &file)
 	if err != nil {
 		return nil, err
 	}
