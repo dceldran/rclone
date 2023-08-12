@@ -14,6 +14,8 @@ import (
 	"github.com/rclone/rclone/vfs"
 	"gopkg.in/telebot.v3"
 	"time"
+	"fmt"
+	"github.com/rclone/rclone/lib/oauthutil"
 )
 
 // Register with Fs
@@ -23,7 +25,10 @@ func init() {
 		Description: "Telegram",
 		NewFs:       NewFs,
 		Config: func(ctx context.Context, name string, m configmap.Mapper, config fs.ConfigIn) (*fs.ConfigOut, error) {
-			return configstruct.Set(m, &Options)
+			if (true) {
+				return configstruct.Set(m, &Options)
+			}
+			return nil, fmt.Errorf("failed to configure. ", "")
 		},
 		Options: []fs.Option{{
 			Name:     "token",
