@@ -5,13 +5,13 @@ import (
 	"errors"
 	"io"
 	"strings"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/fshttp"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/lib/readers"
-	"github.com/rclone/rclone/vfs"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/config/configmap"
+	"github.com/dceldran/rclone/fs/config/configstruct"
+	"github.com/dceldran/rclone/fs/fshttp"
+	"github.com/dceldran/rclone/fs/hash"
+	"github.com/dceldran/rclone/lib/readers"
+	"github.com/dceldran/rclone/vfs"
 	"gopkg.in/telebot.v3"
 )
 
@@ -52,7 +52,7 @@ type Fs struct {
 }
 
 // NewFs constructs a new Fs
-func NewFs(name string, m configmap.Mapper) (fs.Fs, error) {
+func NewFs(name string, m configmap.Mapper) (*Fs, error) {
 	var options Options
 	if err := configstruct.Decode(m, &options); err != nil {
 		return nil, err
