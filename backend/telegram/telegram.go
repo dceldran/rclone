@@ -52,7 +52,7 @@ type Fs struct {
 // NewFs constructs a new Fs
 func NewFs(ctx context.Context, name, root string, m configmap.Mapper) (fs.Fs, error) {
 	options := new(Options)
-	if err := configstruct.Set(m, opt); err != nil {
+	if err := configstruct.Set(m, options); err != nil {
 		return nil, err
 	}
 
