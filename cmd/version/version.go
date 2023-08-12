@@ -12,7 +12,7 @@ import (
 
 	"github.com/coreos/go-semver/semver"
 	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/fs"
+	"github.com/dceldran/rclone/fs"
 	"github.com/rclone/rclone/fs/config/flags"
 	"github.com/rclone/rclone/fs/fshttp"
 	"github.com/spf13/cobra"
