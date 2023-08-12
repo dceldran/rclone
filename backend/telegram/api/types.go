@@ -1,49 +1,49 @@
 package api
 
-type InputPeer = {
+type InputPeer struct {
   _: 'inputPeer'
   user_id: number
   access_hash: string
 }
 
-type InputUser = {
+type InputUser struct {
   _: 'inputUser'
   user_id: number
   access_hash: string
 }
 
-type InputChannel = {
+type InputChannel struct {
   _: 'inputChannel'
   channel_id: number
   access_hash: string
 }
 
-type InputMessageID = {
+type InputMessageID struct {
   _: 'inputMessageID'
   id: number
 }
 
-type MessagesGetMessages = {
+type MessagesGetMessages struct {
   _: 'messages.getMessages'
   id: InputMessageID[]
 }
 
-type MessagesGetMessagesResponse = {
+type MessagesGetMessagesResponse struct {
   messages: Message[]
 }
 
-type Message = {
+type Message struct {
   _: 'message'
   id: number
   media: Media
 }
 
-type Media = {
+type Media struct {
   _: 'messageMediaDocument'
   document: Document
 }
 
-type Document = {
+type Document struct {
   _: 'document'
   id: string
   access_hash: string
@@ -51,57 +51,3 @@ type Document = {
   mime_type: string
   file_reference: Uint8Array
 }
-
-// export namespace Api {
-//   export type InputPeer = {
-//     _: 'inputPeer'
-//     user_id: number
-//     access_hash: string
-//   }
-
-//   export type InputUser = {
-//     _: 'inputUser'
-//     user_id: number
-//     access_hash: string
-//   }
-
-//   export type InputChannel = {
-//     _: 'inputChannel'
-//     channel_id: number
-//     access_hash: string
-//   }
-
-//   export type InputMessageID = {
-//     _: 'inputMessageID'
-//     id: number
-//   }
-
-//   export type MessagesGetMessages = {
-//     _: 'messages.getMessages'
-//     id: InputMessageID[]
-//   }
-
-//   export type MessagesGetMessagesResponse = {
-//     messages: Message[]
-//   }
-
-//   export type Message = {
-//     _: 'message'
-//     id: number
-//     media: Media
-//   }
-
-//   export type Media = {
-//     _: 'messageMediaDocument'
-//     document: Document
-//   }
-
-//   export type Document = {
-//     _: 'document'
-//     id: string
-//     access_hash: string
-//     size: number
-//     mime_type: string
-//     file_reference: Uint8Array
-//   }
-// }
