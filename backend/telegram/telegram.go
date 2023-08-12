@@ -13,6 +13,7 @@ import (
 	"github.com/dceldran/rclone/lib/readers"
 	"github.com/dceldran/rclone/vfs"
 	"gopkg.in/telebot.v3"
+	"time"
 )
 
 // Register with Fs
@@ -22,7 +23,8 @@ func init() {
 		Description: "Telegram",
 		NewFs:       NewFs,
 		Config: func(ctx context.Context, name string, m configmap.Mapper) {
-			configstruct.Set(m, &Options)
+			opt := new(Options)
+			configstruct.Set(m, &opt)
 		},
 		Options: []fs.Option{{
 			Name:     "token",
