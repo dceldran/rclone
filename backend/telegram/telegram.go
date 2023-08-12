@@ -10,7 +10,6 @@ import (
 	"github.com/dceldran/rclone/fs/config/configstruct"
 	"github.com/dceldran/rclone/fs/hash"
 	"github.com/dceldran/rclone/lib/readers"
-	"github.com/dceldran/rclone/vfs"
 	"gopkg.in/telebot.v3"
 	"time"
 )
@@ -96,7 +95,7 @@ func (f *Fs) Hashes() hash.Set {
 }
 
 // Put uploads contents to the remote path
-func (f *Fs) Put(ctx context.Context, in io.ReadCloser, src fs.ObjectInfo, options ...fs.OpenOption) (fs.Object, error) {
+func (f *Fs) Put(ctx context.Context, in io.Reader, src fs.ObjectInfo, options ...fs.OpenOption) (fs.Object, error) {
 	if src.Size() > int64(2<<30) {
 		return nil, errors.New("telegram backend only supports files up to 2GB in size")
 	}
@@ -107,7 +106,7 @@ func (f *Fs) Put(ctx context.Context, in io.ReadCloser, src fs.ObjectInfo, optio
 	}
 
 	file := telebot.Document{
-		File:   telebot.FromReader(readers.NewLimitedReadCloser(in, src.Size())),
+		File:   telebot.FromReader(in),
 		Caption: fileName,
 	}
 
