@@ -22,7 +22,7 @@ func init() {
 		Description: "Telegram",
 		NewFs:       NewFs,
 		Config: func(ctx context.Context, name string, m configmap.Mapper) {
-			return configstruct.Set(m, &Options)
+			configstruct.Set(m, &Options)
 		},
 		Options: []fs.Option{{
 			Name:     "token",
