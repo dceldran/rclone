@@ -112,7 +112,7 @@ func (f *Fs) Put(ctx context.Context, in io.ReadCloser, src fs.ObjectInfo, optio
 		Caption: fileName,
 	}
 
-	message, err := f.bot.Send(bot.Me, &file)
+	message, err := f.bot.Send(f.bot.Me, &file)
 	if err != nil {
 		return nil, err
 	}
