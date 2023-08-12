@@ -6,7 +6,6 @@ import (
 	"io"
 	"strings"
 	"github.com/dceldran/rclone/fs"
-	"github.com/dceldran/rclone/fs/config"
 	"github.com/dceldran/rclone/fs/config/configmap"
 	"github.com/dceldran/rclone/fs/config/configstruct"
 	"github.com/dceldran/rclone/fs/fshttp"
@@ -124,7 +123,7 @@ func (f *Fs) Put(ctx context.Context, in io.ReadCloser, src fs.ObjectInfo, optio
 		path:      "/" + message.Document.FileID,
 		name:      fileName,
 		size:      src.Size(),
-		modTime:   message.Date,
+		modTime:   message.Unixtime,
 		isDir:     false,
 	}, nil
 }
@@ -147,7 +146,7 @@ func (f *Fs) NewObject(ctx context.Context, remote string) (fs.Object, error) {
 		path:      remote,
 		name:      message.FilePath,
 		size:      int64(message.FileSize),
-		modTime:   time.Unix(message.Date, 0),
+		modTime:   time.Unix(message.Unixtime, 0),
 		isDir:     false,
 	}, nil
 }
