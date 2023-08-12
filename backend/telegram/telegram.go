@@ -219,7 +219,7 @@ func (o *Object) Storable() bool {
 }
 
 // Open opens the file for read
-func (o *Object) Open(ctx context.Context, options ...fs.OpenOption) (in io.ReadCloser, error) {
+func (o *Object) Open(ctx context.Context, options ...fs.OpenOption) (in io.ReadCloser, err error) {
 	localPath := "/tmp/rclone/"+o.path[1:]
 	err := o.fs.bot.Download(&telebot.File{FileID: o.path[1:]}, localPath)
 	fileBytes, errOpen := os.Open(localPath)
