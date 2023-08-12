@@ -10,13 +10,13 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/lib/file"
-	"github.com/rclone/rclone/lib/ranges"
-	"github.com/rclone/rclone/vfs/vfscache/downloaders"
-	"github.com/rclone/rclone/vfs/vfscache/writeback"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/fserrors"
+	"github.com/dceldran/rclone/fs/operations"
+	"github.com/dceldran/rclone/lib/file"
+	"github.com/dceldran/rclone/lib/ranges"
+	"github.com/dceldran/rclone/vfs/vfscache/downloaders"
+	"github.com/dceldran/rclone/vfs/vfscache/writeback"
 )
 
 // NB as Cache and Item are tightly linked it is necessary to have a

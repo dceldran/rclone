@@ -9,9 +9,9 @@ import (
 	"os/exec"
 	"testing"
 
-	_ "github.com/rclone/rclone/backend/all"
-	"github.com/rclone/rclone/cmd/serve/httplib"
-	"github.com/rclone/rclone/fstest"
+	_ "github.com/dceldran/rclone/backend/all"
+	"github.com/dceldran/rclone/cmd/serve/httplib"
+	"github.com/dceldran/rclone/fstest"
 	"github.com/stretchr/testify/assert"
 )
 

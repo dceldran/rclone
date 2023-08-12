@@ -12,10 +12,10 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/backend/seafile/api"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/lib/readers"
-	"github.com/rclone/rclone/lib/rest"
+	"github.com/dceldran/rclone/backend/seafile/api"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/lib/readers"
+	"github.com/dceldran/rclone/lib/rest"
 )
 
 // Start of the API URLs

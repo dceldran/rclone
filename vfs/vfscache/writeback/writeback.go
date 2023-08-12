@@ -9,9 +9,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/vfs/vfscommon"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/fserrors"
+	"github.com/dceldran/rclone/vfs/vfscommon"
 )
 
 const (

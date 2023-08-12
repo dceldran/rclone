@@ -13,8 +13,8 @@ import (
 
 	"github.com/Azure/go-autorest/autorest/adal"
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/fshttp"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/fshttp"
 )
 
 const (

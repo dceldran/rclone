@@ -8,9 +8,9 @@ import (
 	"path"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/lib/readers"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/hash"
+	"github.com/dceldran/rclone/lib/readers"
 )
 
 // Object describes an HDFS file

@@ -4,9 +4,9 @@ package filterflags
 import (
 	"context"
 
-	"github.com/rclone/rclone/fs/config/flags"
-	"github.com/rclone/rclone/fs/filter"
-	"github.com/rclone/rclone/fs/rc"
+	"github.com/dceldran/rclone/fs/config/flags"
+	"github.com/dceldran/rclone/fs/filter"
+	"github.com/dceldran/rclone/fs/rc"
 	"github.com/spf13/pflag"
 )
 

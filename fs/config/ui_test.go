@@ -11,11 +11,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/fs/config/configfile"
-	"github.com/rclone/rclone/fs/config/obscure"
-	"github.com/rclone/rclone/fs/rc"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/config"
+	"github.com/dceldran/rclone/fs/config/configfile"
+	"github.com/dceldran/rclone/fs/config/obscure"
+	"github.com/dceldran/rclone/fs/rc"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

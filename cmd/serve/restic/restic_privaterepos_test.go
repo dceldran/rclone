@@ -10,10 +10,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/rclone/rclone/cmd/serve/httplib"
+	"github.com/dceldran/rclone/cmd/serve/httplib"
 
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/cmd/serve/httplib/httpflags"
+	"github.com/dceldran/rclone/cmd"
+	"github.com/dceldran/rclone/cmd/serve/httplib/httpflags"
 	"github.com/stretchr/testify/require"
 )
 

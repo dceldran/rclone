@@ -6,9 +6,9 @@ import (
 	"path"
 	"strings"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/lib/encoder"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/config"
+	"github.com/dceldran/rclone/lib/encoder"
 )
 
 func init() {

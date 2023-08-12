@@ -7,12 +7,12 @@ import (
 	"os"
 	"testing"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/fstest/mockfs"
-	"github.com/rclone/rclone/fstest/mockobject"
-	"github.com/rclone/rclone/vfs/vfscommon"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/operations"
+	"github.com/dceldran/rclone/fstest"
+	"github.com/dceldran/rclone/fstest/mockfs"
+	"github.com/dceldran/rclone/fstest/mockobject"
+	"github.com/dceldran/rclone/vfs/vfscommon"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

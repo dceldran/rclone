@@ -9,12 +9,12 @@ import (
 	"testing"
 	"time"
 
-	_ "github.com/rclone/rclone/backend/local"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/lib/random"
+	_ "github.com/dceldran/rclone/backend/local"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/hash"
+	"github.com/dceldran/rclone/fs/operations"
+	"github.com/dceldran/rclone/fstest"
+	"github.com/dceldran/rclone/lib/random"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

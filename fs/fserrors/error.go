@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/rclone/rclone/lib/errors"
+	"github.com/dceldran/rclone/lib/errors"
 )
 
 // Retrier is an optional interface for error as to whether the

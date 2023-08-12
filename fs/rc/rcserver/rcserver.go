@@ -18,24 +18,24 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rclone/rclone/fs/rc/webgui"
+	"github.com/dceldran/rclone/fs/rc/webgui"
 
 	"github.com/pkg/errors"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/skratchdot/open-golang/open"
 
-	"github.com/rclone/rclone/cmd/serve/httplib"
-	"github.com/rclone/rclone/cmd/serve/httplib/serve"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/accounting"
-	"github.com/rclone/rclone/fs/cache"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/fs/list"
-	"github.com/rclone/rclone/fs/rc"
-	"github.com/rclone/rclone/fs/rc/jobs"
-	"github.com/rclone/rclone/fs/rc/rcflags"
-	"github.com/rclone/rclone/lib/random"
+	"github.com/dceldran/rclone/cmd/serve/httplib"
+	"github.com/dceldran/rclone/cmd/serve/httplib/serve"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/accounting"
+	"github.com/dceldran/rclone/fs/cache"
+	"github.com/dceldran/rclone/fs/config"
+	"github.com/dceldran/rclone/fs/list"
+	"github.com/dceldran/rclone/fs/rc"
+	"github.com/dceldran/rclone/fs/rc/jobs"
+	"github.com/dceldran/rclone/fs/rc/rcflags"
+	"github.com/dceldran/rclone/lib/random"
 )
 
 var promHandler http.Handler

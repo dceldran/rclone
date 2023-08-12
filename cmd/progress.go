@@ -9,11 +9,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/accounting"
-	"github.com/rclone/rclone/fs/log"
-	"github.com/rclone/rclone/fs/operations"
-	"github.com/rclone/rclone/lib/terminal"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/accounting"
+	"github.com/dceldran/rclone/fs/log"
+	"github.com/dceldran/rclone/fs/operations"
+	"github.com/dceldran/rclone/lib/terminal"
 )
 
 const (

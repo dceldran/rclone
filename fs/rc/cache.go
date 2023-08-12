@@ -6,9 +6,9 @@ import (
 	"context"
 	"errors"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/cache"
-	"github.com/rclone/rclone/fs/config/configmap"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/cache"
+	"github.com/dceldran/rclone/fs/config/configmap"
 )
 
 // GetFsNamed gets an fs.Fs named fsName either from the cache or creates it afresh

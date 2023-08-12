@@ -10,14 +10,14 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/accounting"
-	"github.com/rclone/rclone/fs/cache"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/config/obscure"
-	"github.com/rclone/rclone/fs/fspath"
-	"github.com/rclone/rclone/fs/hash"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/accounting"
+	"github.com/dceldran/rclone/fs/cache"
+	"github.com/dceldran/rclone/fs/config/configmap"
+	"github.com/dceldran/rclone/fs/config/configstruct"
+	"github.com/dceldran/rclone/fs/config/obscure"
+	"github.com/dceldran/rclone/fs/fspath"
+	"github.com/dceldran/rclone/fs/hash"
 )
 
 // Globals

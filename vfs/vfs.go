@@ -33,12 +33,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/cache"
-	"github.com/rclone/rclone/fs/log"
-	"github.com/rclone/rclone/fs/walk"
-	"github.com/rclone/rclone/vfs/vfscache"
-	"github.com/rclone/rclone/vfs/vfscommon"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/cache"
+	"github.com/dceldran/rclone/fs/log"
+	"github.com/dceldran/rclone/fs/walk"
+	"github.com/dceldran/rclone/vfs/vfscache"
+	"github.com/dceldran/rclone/vfs/vfscommon"
 )
 
 // Node represents either a directory (*Dir) or a file (*File)

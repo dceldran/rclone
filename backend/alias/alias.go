@@ -5,11 +5,11 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/cache"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/fspath"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/cache"
+	"github.com/dceldran/rclone/fs/config/configmap"
+	"github.com/dceldran/rclone/fs/config/configstruct"
+	"github.com/dceldran/rclone/fs/fspath"
 )
 
 // Register with Fs

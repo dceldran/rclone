@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/vfs/vfscommon"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/vfs/vfscommon"
 	"github.com/stretchr/testify/assert"
 )
 

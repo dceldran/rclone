@@ -19,12 +19,12 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/fserrors"
-	"github.com/rclone/rclone/fs/fspath"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/lib/pacer"
+	"github.com/dceldran/rclone/fs/config/configmap"
+	"github.com/dceldran/rclone/fs/config/configstruct"
+	"github.com/dceldran/rclone/fs/fserrors"
+	"github.com/dceldran/rclone/fs/fspath"
+	"github.com/dceldran/rclone/fs/hash"
+	"github.com/dceldran/rclone/lib/pacer"
 )
 
 // EntryType can be associated with remote paths to identify their type

@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/putdotio/go-putio/putio"
-	"github.com/rclone/rclone/fs/fserrors"
+	"github.com/dceldran/rclone/fs/fserrors"
 )
 
 func checkStatusCode(resp *http.Response, expected int) error {

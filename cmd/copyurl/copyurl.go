@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/flags"
-	"github.com/rclone/rclone/fs/operations"
+	"github.com/dceldran/rclone/cmd"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/config/flags"
+	"github.com/dceldran/rclone/fs/operations"
 	"github.com/spf13/cobra"
 )
 

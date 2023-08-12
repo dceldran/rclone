@@ -6,8 +6,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/fs/config/configfile"
+	"github.com/dceldran/rclone/fs/config"
+	"github.com/dceldran/rclone/fs/config/configfile"
 	"github.com/stretchr/testify/assert"
 )
 

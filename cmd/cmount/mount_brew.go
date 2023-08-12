@@ -8,8 +8,8 @@ package cmount
 
 import (
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/cmd/mountlib"
-	"github.com/rclone/rclone/vfs"
+	"github.com/dceldran/rclone/cmd/mountlib"
+	"github.com/dceldran/rclone/vfs"
 )
 
 func init() {

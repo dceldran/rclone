@@ -15,12 +15,12 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/configstruct"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fs/walk"
-	"github.com/rclone/rclone/lib/bucket"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/config/configmap"
+	"github.com/dceldran/rclone/fs/config/configstruct"
+	"github.com/dceldran/rclone/fs/hash"
+	"github.com/dceldran/rclone/fs/walk"
+	"github.com/dceldran/rclone/lib/bucket"
 )
 
 var (

@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/backend/union/upstream"
-	"github.com/rclone/rclone/fs"
+	"github.com/dceldran/rclone/backend/union/upstream"
+	"github.com/dceldran/rclone/fs"
 )
 
 var policies = make(map[string]Policy)

@@ -19,13 +19,13 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/cmd/serve/proxy"
-	"github.com/rclone/rclone/cmd/serve/proxy/proxyflags"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config"
-	"github.com/rclone/rclone/lib/env"
-	"github.com/rclone/rclone/vfs"
-	"github.com/rclone/rclone/vfs/vfsflags"
+	"github.com/dceldran/rclone/cmd/serve/proxy"
+	"github.com/dceldran/rclone/cmd/serve/proxy/proxyflags"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/config"
+	"github.com/dceldran/rclone/lib/env"
+	"github.com/dceldran/rclone/vfs"
+	"github.com/dceldran/rclone/vfs/vfsflags"
 	"golang.org/x/crypto/ssh"
 )
 

@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fstest/testy"
-	"github.com/rclone/rclone/lib/random"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fstest/testy"
+	"github.com/dceldran/rclone/lib/random"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -7,10 +7,10 @@ import (
 	"testing"
 
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/hash"
-	"github.com/rclone/rclone/fstest/mockobject"
-	"github.com/rclone/rclone/lib/readers"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/hash"
+	"github.com/dceldran/rclone/fstest/mockobject"
+	"github.com/dceldran/rclone/lib/readers"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -13,8 +13,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/obscure"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/config/obscure"
 )
 
 func TestMain(m *testing.M) {

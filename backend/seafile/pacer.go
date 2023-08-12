@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/lib/pacer"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/lib/pacer"
 )
 
 const (

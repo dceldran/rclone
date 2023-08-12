@@ -14,10 +14,10 @@ import (
 
 	"github.com/billziss-gh/cgofuse/fuse"
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/cmd/mountlib"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/log"
-	"github.com/rclone/rclone/vfs"
+	"github.com/dceldran/rclone/cmd/mountlib"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/log"
+	"github.com/dceldran/rclone/vfs"
 )
 
 const fhUnset = ^uint64(0)

@@ -7,9 +7,9 @@ import (
 	"os"
 	"testing"
 
-	_ "github.com/rclone/rclone/backend/local"
-	"github.com/rclone/rclone/fstest"
-	"github.com/rclone/rclone/fstest/fstests"
+	_ "github.com/dceldran/rclone/backend/local"
+	"github.com/dceldran/rclone/fstest"
+	"github.com/dceldran/rclone/fstest/fstests"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -18,10 +18,10 @@ import (
 
 	"github.com/billziss-gh/cgofuse/fuse"
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/cmd/mountlib"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/lib/atexit"
-	"github.com/rclone/rclone/vfs"
+	"github.com/dceldran/rclone/cmd/mountlib"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/lib/atexit"
+	"github.com/dceldran/rclone/vfs"
 )
 
 func init() {

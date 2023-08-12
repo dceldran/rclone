@@ -3,13 +3,13 @@ package serve
 import (
 	"errors"
 
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/cmd/serve/dlna"
-	"github.com/rclone/rclone/cmd/serve/ftp"
-	"github.com/rclone/rclone/cmd/serve/http"
-	"github.com/rclone/rclone/cmd/serve/restic"
-	"github.com/rclone/rclone/cmd/serve/sftp"
-	"github.com/rclone/rclone/cmd/serve/webdav"
+	"github.com/dceldran/rclone/cmd"
+	"github.com/dceldran/rclone/cmd/serve/dlna"
+	"github.com/dceldran/rclone/cmd/serve/ftp"
+	"github.com/dceldran/rclone/cmd/serve/http"
+	"github.com/dceldran/rclone/cmd/serve/restic"
+	"github.com/dceldran/rclone/cmd/serve/sftp"
+	"github.com/dceldran/rclone/cmd/serve/webdav"
 	"github.com/spf13/cobra"
 )
 

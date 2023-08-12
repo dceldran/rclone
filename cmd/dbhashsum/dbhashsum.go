@@ -3,11 +3,11 @@ package dbhashsum
 import (
 	"context"
 
-	"github.com/rclone/rclone/backend/dropbox"
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/cmd/hashsum"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/operations"
+	"github.com/dceldran/rclone/backend/dropbox"
+	"github.com/dceldran/rclone/cmd"
+	"github.com/dceldran/rclone/cmd/hashsum"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/operations"
 	"github.com/spf13/cobra"
 )
 

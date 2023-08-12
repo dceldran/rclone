@@ -2,7 +2,7 @@
 
 package local
 
-import "github.com/rclone/rclone/lib/encoder"
+import "github.com/dceldran/rclone/lib/encoder"
 
 // This is the encoding used by the local backend for macOS
 //

@@ -20,16 +20,16 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/cmd"
-	"github.com/rclone/rclone/cmd/cmount"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/flags"
-	"github.com/rclone/rclone/fs/fshttp"
-	"github.com/rclone/rclone/lib/buildinfo"
-	"github.com/rclone/rclone/lib/random"
+	"github.com/dceldran/rclone/cmd"
+	"github.com/dceldran/rclone/cmd/cmount"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/config/flags"
+	"github.com/dceldran/rclone/fs/fshttp"
+	"github.com/dceldran/rclone/lib/buildinfo"
+	"github.com/dceldran/rclone/lib/random"
 	"github.com/spf13/cobra"
 
-	versionCmd "github.com/rclone/rclone/cmd/version"
+	versionCmd "github.com/dceldran/rclone/cmd/version"
 )
 
 // Options contains options for the self-update command

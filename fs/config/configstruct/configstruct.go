@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/fs/config/configmap"
+	"github.com/dceldran/rclone/fs/config/configmap"
 )
 
 var matchUpper = regexp.MustCompile("([A-Z]+)")

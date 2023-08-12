@@ -12,13 +12,13 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/cache"
-	"github.com/rclone/rclone/fs/config/configmap"
-	"github.com/rclone/rclone/fs/config/obscure"
-	libcache "github.com/rclone/rclone/lib/cache"
-	"github.com/rclone/rclone/vfs"
-	"github.com/rclone/rclone/vfs/vfsflags"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/cache"
+	"github.com/dceldran/rclone/fs/config/configmap"
+	"github.com/dceldran/rclone/fs/config/obscure"
+	libcache "github.com/dceldran/rclone/lib/cache"
+	"github.com/dceldran/rclone/vfs"
+	"github.com/dceldran/rclone/vfs/vfsflags"
 )
 
 // Help contains text describing how to use the proxy
@@ -35,7 +35,7 @@ together, if |--auth-proxy| is set the authorized keys option will be
 ignored.
 
 There is an example program
-[bin/test_proxy.py](https://github.com/rclone/rclone/blob/master/test_proxy.py)
+[bin/test_proxy.py](https://github.com/dceldran/rclone/blob/master/test_proxy.py)
 in the rclone source code.
 
 The program's job is to take a |user| and |pass| on the input and turn

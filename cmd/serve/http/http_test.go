@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	_ "github.com/rclone/rclone/backend/local"
-	"github.com/rclone/rclone/cmd/serve/httplib"
-	"github.com/rclone/rclone/fs"
-	"github.com/rclone/rclone/fs/config/configfile"
-	"github.com/rclone/rclone/fs/filter"
+	_ "github.com/dceldran/rclone/backend/local"
+	"github.com/dceldran/rclone/cmd/serve/httplib"
+	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/config/configfile"
+	"github.com/dceldran/rclone/fs/filter"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
