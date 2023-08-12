@@ -222,8 +222,11 @@ func (o *Object) Storable() bool {
 func (o *Object) Open(ctx context.Context, options ...fs.OpenOption) (in io.ReadCloser, error) {
 	localPath := "/tmp/rclone/"+o.path[1:]
 	err := o.fs.bot.Download(&telebot.File{FileID: o.path[1:]}, localPath)
-	file, err2 := os.Open(localPath)
-	return file, err
+	fileBytes, errOpen := os.Open(localPath)
+	if errOpen != nil {
+		return nil, errOpen
+	}
+	return fileBytes, err
 }
 
 // Update updates the object from in with modTime
