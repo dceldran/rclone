@@ -97,7 +97,7 @@ func (f *Fs) Hashes() hash.Set {
 }
 
 // Put uploads contents to the remote path
-func (f *Fs) Put(ctx context.Context, in io.Reader, src fs.ObjectInfo, options ...fs.OpenOption) (fs.Object, error) {
+func (f *Fs) Put(ctx context.Context, in io.ReadCloser, src fs.ObjectInfo, options ...fs.OpenOption) (fs.Object, error) {
 	if src.Size() > int64(2<<30) {
 		return nil, errors.New("telegram backend only supports files up to 2GB in size")
 	}
@@ -112,7 +112,7 @@ func (f *Fs) Put(ctx context.Context, in io.Reader, src fs.ObjectInfo, options .
 		Caption: fileName,
 	}
 
-	message, err := f.bot.Send(telebot.Recipient(f.chatID), &file)
+	message, err := f.bot.Send(bot.Me, &file)
 	if err != nil {
 		return nil, err
 	}
