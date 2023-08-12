@@ -9,7 +9,6 @@ import (
 	"github.com/dceldran/rclone/fs/config/configmap"
 	"github.com/dceldran/rclone/fs/config/configstruct"
 	"github.com/dceldran/rclone/fs/hash"
-	"github.com/dceldran/rclone/lib/readers"
 	"gopkg.in/telebot.v3"
 	"time"
 )
@@ -117,7 +116,6 @@ func (f *Fs) Put(ctx context.Context, in io.Reader, src fs.ObjectInfo, options .
 
 	return &Object{
 		fs:        f,
-		remote:	   fileName,
 		path:      "/" + message.Document.FileID,
 		name:      fileName,
 		size:      src.Size(),
@@ -129,12 +127,12 @@ func (f *Fs) Put(ctx context.Context, in io.Reader, src fs.ObjectInfo, options .
 // List returns a channel to the objects and subdirectories
 // in dir with directory entries popped from the channel
 func (f *Fs) List(ctx context.Context, dir string) (entries fs.DirEntries, err error) {
-	return nil, nil, errors.New("telegram backend does not support directory listing")
+	return nil, errors.New("telegram backend does not support directory listing")
 }
 
 // NewObject finds the Object at remote
 func (f *Fs) NewObject(ctx context.Context, remote string) (fs.Object, error) {
-	message, err := f.bot.GetFile(remote[1:])
+	message, err := f.bot.FileByID(remote[1:])
 	if err != nil {
 		return nil, err
 	}
@@ -144,7 +142,6 @@ func (f *Fs) NewObject(ctx context.Context, remote string) (fs.Object, error) {
 		path:      remote,
 		name:      message.FilePath,
 		size:      int64(message.FileSize),
-		modTime:   time.Unix(message.Unixtime, 0),
 		isDir:     false,
 	}, nil
 }
@@ -172,7 +169,6 @@ func (f *Fs) Precision() time.Duration {
 // Object represents a remote Telegram file
 type Object struct {
 	fs        *Fs
-	remote    string
 	path      string
 	name      string
 	size      int64
@@ -223,10 +219,7 @@ func (o *Object) Storable() bool {
 
 // Open opens the file for read
 func (o *Object) Open(ctx context.Context, options ...fs.OpenOption) (io.ReadCloser, error) {
-	fileBytes, err := o.fs.bot.Download(&telebot.File{FileID: o.path[1:]})
-	if err != nil {
-		return nil, err
-	}
+	fileBytes := o.fs.bot.Download(&telebot.File{FileID: o.path[1:]}, "/tmp/rclone/"+o.path[1:])
 
 	return fileBytes, nil
 }
@@ -238,6 +231,6 @@ func (o *Object) Update(ctx context.Context, in io.Reader, src fs.ObjectInfo, op
 
 // Remove deletes the remote object
 func (o *Object) Remove(ctx context.Context) error {
-	_, err := o.fs.bot.Delete(&telebot.Message{Document: &telebot.Document{FileID: o.path[1:]}})
+	err := o.fs.bot.Delete(&telebot.Message{Document: &telebot.Document{FileID: o.path[1:]}})
 	return err
 }
