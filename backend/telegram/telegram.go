@@ -6,6 +6,7 @@ import (
 	"io"
 	"strings"
 	"github.com/dceldran/rclone/fs"
+	"github.com/dceldran/rclone/fs/config"
 	"github.com/dceldran/rclone/fs/config/configmap"
 	"github.com/dceldran/rclone/fs/config/configstruct"
 	"github.com/dceldran/rclone/fs/fshttp"
