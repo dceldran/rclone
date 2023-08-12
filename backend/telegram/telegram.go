@@ -120,6 +120,7 @@ func (f *Fs) Put(ctx context.Context, in io.ReadCloser, src fs.ObjectInfo, optio
 
 	return &Object{
 		fs:        f,
+		remote:	   fileName,
 		path:      "/" + message.Document.FileID,
 		name:      fileName,
 		size:      src.Size(),
@@ -174,6 +175,7 @@ func (f *Fs) Precision() time.Duration {
 // Object represents a remote Telegram file
 type Object struct {
 	fs        *Fs
+	remote    string
 	path      string
 	name      string
 	size      int64
