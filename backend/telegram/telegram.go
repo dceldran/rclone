@@ -21,7 +21,7 @@ func init() {
 		Name:        "telegram",
 		Description: "Telegram",
 		NewFs:       NewFs,
-		Config: func(ctx context.Context, name string, m configmap.Mapper, config string) error {
+		Config: func(ctx context.Context, name string, m configmap.Mapper) {
 			return configstruct.Set(m, &Options)
 		},
 		Options: []fs.Option{{
@@ -52,7 +52,7 @@ type Fs struct {
 }
 
 // NewFs constructs a new Fs
-func NewFs(name string, m configmap.Mapper) (fs.Fs, error) {
+func NewFs(ctx context.Context, name, root string, m configmap.Mapper) (fs.Fs, error) {
 	var options Options
 	if err := configstruct.Decode(m, &options); err != nil {
 		return nil, err
