@@ -22,10 +22,6 @@ func init() {
 		Name:        "telegram",
 		Description: "Telegram",
 		NewFs:       NewFs,
-		Config: func(ctx context.Context, name string, m configmap.Mapper) {
-			opt := new(Options)
-			configstruct.Set(m, &opt)
-		},
 		Options: []fs.Option{{
 			Name:     "token",
 			Help:     "Telegram bot token.",
@@ -55,8 +51,8 @@ type Fs struct {
 
 // NewFs constructs a new Fs
 func NewFs(ctx context.Context, name, root string, m configmap.Mapper) (fs.Fs, error) {
-	var options Options
-	if err := configstruct.Decode(m, &options); err != nil {
+	options := new(Options)
+	if err := configstruct.Set(m, opt); err != nil {
 		return nil, err
 	}
 
@@ -157,7 +153,7 @@ func (f *Fs) NewObject(ctx context.Context, remote string) (fs.Object, error) {
 		path:      remote,
 		name:      message.FilePath,
 		size:      int64(message.FileSize),
-		modTime:   timedata.FromUnix(message.Date),
+		modTime:   time.Unix(message.Date),
 		isDir:     false,
 	}, nil
 }
