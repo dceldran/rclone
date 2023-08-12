@@ -11,6 +11,7 @@ import (
 	"github.com/dceldran/rclone/fs/hash"
 	"gopkg.in/telebot.v3"
 	"time"
+	"os"
 )
 
 // Register with Fs
@@ -218,10 +219,11 @@ func (o *Object) Storable() bool {
 }
 
 // Open opens the file for read
-func (o *Object) Open(ctx context.Context, options ...fs.OpenOption) (io.ReadCloser, error) {
-	fileBytes := o.fs.bot.Download(&telebot.File{FileID: o.path[1:]}, "/tmp/rclone/"+o.path[1:])
-
-	return fileBytes, nil
+func (o *Object) Open(ctx context.Context, options ...fs.OpenOption) (in io.ReadCloser, error) {
+	localPath := "/tmp/rclone/"+o.path[1:]
+	err := o.fs.bot.Download(&telebot.File{FileID: o.path[1:]}, localPath)
+	file, err2 := os.Open(localPath)
+	return file, err
 }
 
 // Update updates the object from in with modTime
@@ -231,6 +233,6 @@ func (o *Object) Update(ctx context.Context, in io.Reader, src fs.ObjectInfo, op
 
 // Remove deletes the remote object
 func (o *Object) Remove(ctx context.Context) error {
-	err := o.fs.bot.Delete(&telebot.Message{Document: &telebot.Document{FileID: o.path[1:]}})
+	err := o.fs.bot.Delete(&telebot.Message{Document: &telebot.Document{&telebot.File{FileID: o.path[1:]}}})
 	return err
 }
