@@ -46,7 +46,7 @@ type Fs struct {
 	root     string
 	features *fs.Features
 	bot      *telebot.Bot
-	chatID   int64
+	chatID   string
 }
 
 // NewFs constructs a new Fs
