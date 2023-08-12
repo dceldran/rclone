@@ -236,6 +236,7 @@ func (o *Object) Update(ctx context.Context, in io.Reader, src fs.ObjectInfo, op
 
 // Remove deletes the remote object
 func (o *Object) Remove(ctx context.Context) error {
-	err := o.fs.bot.Delete(&telebot.Message{Document: &telebot.Document{FileID: o.path[1:]}})
-	return err
+	// err := o.fs.bot.Delete(&telebot.Message{Document: &telebot.Document{FileID: o.path[1:]}})
+	// return err
+	return errors.New("telegram backend does not support object deletes")
 }
