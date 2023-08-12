@@ -8,7 +8,6 @@ import (
 	"github.com/dceldran/rclone/fs"
 	"github.com/dceldran/rclone/fs/config/configmap"
 	"github.com/dceldran/rclone/fs/config/configstruct"
-	"github.com/dceldran/rclone/fs/fshttp"
 	"github.com/dceldran/rclone/fs/hash"
 	"github.com/dceldran/rclone/lib/readers"
 	"github.com/dceldran/rclone/vfs"
@@ -123,14 +122,14 @@ func (f *Fs) Put(ctx context.Context, in io.ReadCloser, src fs.ObjectInfo, optio
 		path:      "/" + message.Document.FileID,
 		name:      fileName,
 		size:      src.Size(),
-		modTime:   message.Unixtime,
+		modTime:   message.Time(),
 		isDir:     false,
 	}, nil
 }
 
 // List returns a channel to the objects and subdirectories
 // in dir with directory entries popped from the channel
-func (f *Fs) List(ctx context.Context, dir string) (fs.DirChan, fs.EntryChan, error) {
+func (f *Fs) List(ctx context.Context, dir string) (entries fs.DirEntries, err error) {
 	return nil, nil, errors.New("telegram backend does not support directory listing")
 }
 
