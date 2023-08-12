@@ -60,10 +60,6 @@ func NewFs(ctx context.Context, name, root string, m configmap.Mapper) (fs.Fs, e
 	if err != nil {
 		return nil, err
 	}
-	me, err := bot.Me()
-	if err != nil {
-		return nil, err
-	}
 
 	f := &Fs{
 		name:     name,
