@@ -48,7 +48,7 @@ type Options struct {
 type Fs struct {
 	name     string
 	root     string
-	features *vfs.Features
+	features *fs.Features
 	bot      *telebot.Bot
 	chatID   int64
 }
@@ -76,7 +76,6 @@ func NewFs(ctx context.Context, name, root string, m configmap.Mapper) (fs.Fs, e
 	f := &Fs{
 		name:     name,
 		root:     "/",
-		features: vfs.NewFeatures(),
 		bot:      bot,
 		chatID:   chatID,
 	}
@@ -100,7 +99,7 @@ func (f *Fs) String() string {
 }
 
 // Features returns the optional features of this Fs
-func (f *Fs) Features() *vfs.Features {
+func (f *Fs) Features() *fs.Features {
 	return f.features
 }
 
