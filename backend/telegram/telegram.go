@@ -21,7 +21,7 @@ func init() {
 		Name:        "telegram",
 		Description: "Telegram",
 		NewFs:       NewFs,
-		Config: func(ctx context.Context, name string, m configmap.Mapper, config string) error {
+		Config: func(ctx context.Context, name string, m configmap.Mapper, config fs.ConfigIn) (*fs.ConfigOut, error) {
 			return configstruct.Set(m, &Options)
 		},
 		Options: []fs.Option{{
