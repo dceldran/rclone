@@ -37,7 +37,7 @@ func init() {
 // Options defines the configuration for this backend
 type Options struct {
 	Token  string `config:"token"`
-	ChatID string `config:"chat_id"`
+	ChatID int64 `config:"chat_id"`
 }
 
 // Fs represents a remote Telegram chat
@@ -46,7 +46,7 @@ type Fs struct {
 	root     string
 	features *fs.Features
 	bot      *telebot.Bot
-	chatID   string
+	chatID   int64
 }
 
 // NewFs constructs a new Fs
