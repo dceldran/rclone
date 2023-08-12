@@ -64,16 +64,12 @@ func NewFs(ctx context.Context, name, root string, m configmap.Mapper) (fs.Fs, e
 	if err != nil {
 		return nil, err
 	}
-	chatID, err := me.ChatID()
-	if err != nil {
-		return nil, err
-	}
 
 	f := &Fs{
 		name:     name,
 		root:     "/",
 		bot:      bot,
-		chatID:   chatID,
+		chatID:   options.ChatID,
 	}
 
 	return f, nil
@@ -153,7 +149,7 @@ func (f *Fs) NewObject(ctx context.Context, remote string) (fs.Object, error) {
 		path:      remote,
 		name:      message.FilePath,
 		size:      int64(message.FileSize),
-		modTime:   time.Unix(message.Date),
+		modTime:   time.Unix(message.Date, 0),
 		isDir:     false,
 	}, nil
 }
